@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .property-card {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .property-card h2 {
+            margin-top: 0;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Real Estate Website</h1>
+    </div>
+    <div class="container">
+        <h2>Properties</h2>
+        <div id="properties"></div>
+    </div>
+    <div class="footer">
+        &copy; 2023 Real Estate Website
+    </div>
+
+    <script>
+        // Sample data
+        const properties = [
+            { id: 1, title: 'Property 1', price: 100000, image: 'https://picsum.photos/200/300' },
+            { id: 2, title: 'Property 2', price: 200000, image: 'https://picsum.photos/200/301' },
+            { id: 3, title: 'Property 3', price: 300000, image: 'https://picsum.photos/200/302' },
+        ];
+
+        const propertiesContainer = document.getElementById('properties');
+
+        properties.forEach(property => {
+            const propertyCard = document.createElement('div');
+            propertyCard.classList.add('property-card');
+
+            const image = document.createElement('img');
+            image.src = property.image;
+            propertyCard.appendChild(image);
+
+            const title = document.createElement('h2');
+            title.textContent = property.title;
+            propertyCard.appendChild(title);
+
+            const price = document.createElement('p');
+            price.textContent = `$${property.price.toLocaleString()}`;
+            propertyCard.appendChild(price);
+
+            propertiesContainer.appendChild(propertyCard);
+        });
+    </script>
+</body>
+</html>
