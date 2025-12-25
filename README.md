@@ -1,2 +1,10 @@
-# ai-website-1766684137624
-AI-generated website from AI Website Builder
+
+# AI Generated Website 🚀
+
+Generated using **AI Website Builder**
+
+## How to run
+Open `index.html` in your browser.
+
+---
+Built with ❤️
